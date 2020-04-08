@@ -10,9 +10,9 @@ export default function Logon() {
 
   const [id, setId] = useState('');
   const history = useHistory();
-
   async function handleLogon(e) {
     e.preventDefault();
+
     try {
       const response = await api.post('sessions', { id });
       localStorage.setItem('ongId', id);
